@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>French Class Registration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 20px;
+      color: #000;
+      background-color: #fefefe;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #0077cc;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input[type=text], input[type=date], input[type=tel], input[type=email], textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+    .radio-group, .checkbox-group {
+      margin-top: 5px;
+    }
+    .radio-group label, .checkbox-group label {
+      display: block;
+      font-weight: normal;
+      margin: 3px 0;
+    }
+    button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 12px;
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      font-size: 1.1rem;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    button:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+
+<h1>French Class Registration</h1>
+<p><strong>By Vanshika Mishra</strong></p>
+
+<form id="registrationForm">
+
+  <label for="name">1. Full Name *</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="dob">2. Date of Birth *</label>
+  <input type="date" id="dob" name="dob" required>
+
+  <label>3. Gender *</label>
+  <div class="radio-group">
+    <label><input type="radio" name="gender" value="Male" required> Male</label>
+    <label><input type="radio" name="gender" value="Female"> Female</label>
+    <label><input type="radio" name="gender" value="Other"> Other</label>
+  </div>
+
+  <label for="phone">4. Phone Number (with country code) *</label>
+  <input type="tel" id="phone" name="phone" required>
+
+  <label for="email">5. Email Address *</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="cityCountry">6. City & Country</label>
+  <input type="text" id="cityCountry" name="cityCountry">
+
+  <label>7. Preferred Class Mode</label>
+  <div class="radio-group">
+    <label><input type="radio" name="mode" value="Online"> Online</label>
+    <label><input type="radio" name="mode" value="Offline"> Offline</label>
+    <label><input type="radio" name="mode" value="Not decided"> Not decided yet</label>
+  </div>
+
+  <label for="occupation">8. Current Occupation / Study Status</label>
+  <input type="text" id="occupation" name="occupation">
+
+  <label>9. Highest Qualification</label>
+  <div class="radio-group">
+    <label><input type="radio" name="qualification" value="High School"> High School</label>
+    <label><input type="radio" name="qualification" value="Bachelor’s Degree"> Bachelor’s Degree</label>
+    <label><input type="radio" name="qualification" value="Master’s Degree"> Master’s Degree</label>
+    <label><input type="radio" name="qualification" value="Other"> Other</label>
+  </div>
+
+  <label>10. Have you studied French before?</label>
+  <div class="radio-group">
+    <label><input type="radio" name="studied" value="Yes"> Yes</label>
+    <label><input type="radio" name="studied" value="No"> No</label>
+  </div>
+
+  <label>11. If yes, what level? (Check all that apply)</label>
+  <div class="checkbox-group" id="levelGroup">
+    <label><input type="checkbox" value="A1"> A1</label>
+    <label><input type="checkbox" value="A2"> A2</label>
+    <label><input type="checkbox" value="B1"> B1</label>
+    <label><input type="checkbox" value="B2"> B2</label>
+    <label><input type="checkbox" value="Not Sure"> Not Sure</label>
+    <label><input type="checkbox" value="Other"> Other</label>
+  </div>
+
+  <label>12. Why do you want to learn French? (Check all that apply)</label>
+  <div class="checkbox-group" id="reasonGroup">
+    <label><input type="checkbox" value="Education"> Education</label>
+    <label><input type="checkbox" value="Job Opportunities"> Job Opportunities</label>
+    <label><input type="checkbox" value="Immigration"> Immigration</label>
+    <label><input type="checkbox" value="Travel"> Travel</label>
+    <label><input type="checkbox" value="Hobby"> Hobby</label>
+    <label><input type="checkbox" value="Other"> Other</label>
+  </div>
+
+  <label>13. Preferred Class Days (Check all that apply)</label>
+  <div class="checkbox-group" id="dayGroup">
+    <label><input type="checkbox" value="Monday"> Monday</label>
+    <label><input type="checkbox" value="Tuesday"> Tuesday</label>
+    <label><input type="checkbox" value="Wednesday"> Wednesday</label>
+    <label><input type="checkbox" value="Thursday"> Thursday</label>
+    <label><input type="checkbox" value="Friday"> Friday</label>
+    <label><input type="checkbox" value="Saturday"> Saturday</label>
+    <label><input type="checkbox" value="Sunday"> Sunday</label>
+  </div>
+
+  <label>14. Preferred Time Slot</label>
+  <div class="radio-group">
+    <label><input type="radio" name="time" value="Morning"> Morning</label>
+    <label><input type="radio" name="time" value="Afternoon"> Afternoon</label>
+    <label><input type="radio" name="time" value="Evening"> Evening</label>
+    <label><input type="radio" name="time" value="Flexible"> Flexible</label>
+  </div>
+
+  <label>15. Preferred Teaching Language</label>
+  <div class="radio-group">
+    <label><input type="radio" name="language" value="English"> English</label>
+    <label><input type="radio" name="language" value="Hindi"> Hindi</label>
+    <label><input type="radio" name="language" value="Both"> Both</label>
+  </div>
+
+  <label for="certification">16. Prior French Certifications</label>
+  <input type="text" id="certification" name="certification">
+
+  <label for="expectations">17. Special Learning Needs or Expectations</label>
+  <textarea id="expectations" name="expectations" rows="3"></textarea>
+
+  <label>18. How did you hear about this class?</label>
+  <div class="radio-group">
+    <label><input type="radio" name="ref" value="Instagram"> Instagram</label>
+    <label><input type="radio" name="ref" value="WhatsApp"> WhatsApp</label>
+    <label><input type="radio" name="ref" value="Friend"> Friend</label>
+    <label><input type="radio" name="ref" value="Google"> Google</label>
+    <label><input type="radio" name="ref" value="Other"> Other</label>
+  </div>
+
+  <button type="submit">Submit via WhatsApp</button>
+</form>
+
+<script>
+  document.getElementById('registrationForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    function getInput(id) { return document.getElementById(id)?.value.trim(); }
+    function getRadio(name) {
+      let checked = document.querySelector('input[name="' + name + '"]:checked');
+      return checked ? checked.value : "";
+    }
+    function getCheckedValues(id) {
+      let checks = document.querySelectorAll('#' + id + ' input[type=checkbox]:checked');
+      return Array.from(checks).map(ch => ch.value).join(", ");
+    }
+
+    const message =
+`French Class Registration:
+Name: ${getInput('name')}
+DOB: ${getInput('dob')}
+Gender: ${getRadio('gender')}
+Phone: ${getInput('phone')}
+Email: ${getInput('email')}
+City & Country: ${getInput('cityCountry')}
+Class Mode: ${getRadio('mode')}
+Occupation: ${getInput('occupation')}
+Qualification: ${getRadio('qualification')}
+Studied French Before: ${getRadio('studied')}
+Level: ${getCheckedValues('levelGroup')}
+Reasons: ${getCheckedValues('reasonGroup')}
+Preferred Days: ${getCheckedValues('dayGroup')}
+Time Slot: ${getRadio('time')}
+Teaching Language: ${getRadio('language')}
+Certifications: ${getInput('certification')}
+Expectations: ${getInput('expectations')}
+Heard via: ${getRadio('ref')}`;
+
+    const whatsappNumber = '919465544904';
+    const url = 'https://wa.me/' + whatsappNumber + '?text=' + encodeURIComponent(message);
+    window.open(url, '_blank');
+  });
+</script>
+
+</body>
+</html>
